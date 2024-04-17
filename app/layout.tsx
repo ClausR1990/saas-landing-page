@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          'font-sans antialiased',
           fontSans.variable
           // creditFont.variable
         )}
@@ -45,6 +45,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <footer></footer>
         </ThemeProvider>
       </body>
     </html>

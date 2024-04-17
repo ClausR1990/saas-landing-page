@@ -1,25 +1,29 @@
+import { cn } from '@/lib/utils'
 import { SVGProps } from 'react'
 
-export const CreditCard = () => {
+export const CreditCard = ({ className }: { className?: string }) => {
   return (
     <div
       aria-hidden='true'
-      className='flex aspect-[1.636/1] w-[400px] flex-col justify-between gap-3 overflow-hidden rounded-xl border border-muted bg-card/10 p-6 backdrop-blur-md'
+      className={cn(
+        'flex aspect-[1.636/1] w-[400px] max-w-full flex-col justify-between gap-3 overflow-hidden rounded-xl border border-muted bg-card/30 p-4 backdrop-blur-md md:p-6',
+        className
+      )}
     >
       <div className='flex items-end justify-end'>
-        <MasterCardLogo className='-my-3 !h-auto w-16' />
+        <MasterCardLogo className='-my-3 !h-auto w-12 md:w-16' />
       </div>
       <div className='flex flex-col space-y-3'>
-        <Chip className='h-auto w-12 fill-orange-300' />
-        <div className='flex items-center gap-3 font-mono text-2xl text-foreground/80 drop-shadow-lg'>
+        <Chip className='h-auto w-10 fill-orange-300 md:w-12' />
+        <div className='flex items-center gap-3 font-mono text-xl text-foreground/80 drop-shadow-lg'>
           <span>4242</span>
           <span>4242</span>
           <span>4242</span>
           <span>4242</span>
         </div>
-        <div className='flex items-center gap-3 font-mono text-xs uppercase'>
-          <span className='text-foreground/80'>exp 12/24</span>
-          <span className='text-foreground/80'>CVC 123</span>
+        <div className='flex items-center gap-3 font-mono text-xs uppercase text-foreground/50'>
+          <span>exp 12/24</span>
+          <span>CVC 123</span>
         </div>
       </div>
     </div>
@@ -63,9 +67,9 @@ const MasterCardLogo: React.FC<SVGProps<SVGSVGElement>> = (props) => {
       xmlns='http://www.w3.org/2000/svg'
       {...props}
     >
-      <g fill='none' fill-rule='evenodd'>
+      <g fill='none' fillRule='evenodd'>
         <circle cx='7' cy='12' r='7' fill='#EA001B' />
-        <circle cx='17' cy='12' r='7' fill='#FFA200' fill-opacity='.8' />
+        <circle cx='17' cy='12' r='7' fill='#FFA200' fillOpacity='.8' />
       </g>
     </svg>
   )
