@@ -1,3 +1,4 @@
+'use '
 import { CreditCard } from './credit-card'
 import HeroBg from '@/public/hero-bg.webp'
 import Image from 'next/image'
@@ -12,7 +13,7 @@ export const Hero = () => {
         quality={100}
         placeholder='blur'
         priority
-        className='absolute left-0 top-0 -z-20 size-full object-cover mix-blend-overlay dark:opacity-30 dark:mix-blend-normal'
+        className='absolute left-0 top-0 -z-20 size-full object-cover mix-blend-overlay dark:opacity-60 dark:mix-blend-normal'
       />
       <div className='container grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-20'>
         <div className='prose prose-sm lg:prose-2xl'>

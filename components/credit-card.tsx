@@ -1,5 +1,7 @@
+'use client'
 import { cn } from '@/lib/utils'
 import { SVGProps } from 'react'
+import { motion } from 'framer-motion'
 
 export const CreditCard = ({ className }: { className?: string }) => {
   return (
@@ -10,12 +12,24 @@ export const CreditCard = ({ className }: { className?: string }) => {
         className
       )}
     >
+      <motion.div
+        initial={{ x: -500, rotate: -45 }}
+        animate={{ x: 500 }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          repeatType: 'loop',
+          ease: 'easeInOut',
+          repeatDelay: 3,
+        }}
+        className='absolute -top-14 left-0 h-[220%] w-40 origin-top -rotate-45 bg-gradient-to-r from-transparent via-foreground/10 to-transparent'
+      ></motion.div>
       <div className='flex items-end justify-end'>
         <MasterCardLogo className='-my-3 !h-auto w-12 md:w-16' />
       </div>
       <div className='flex flex-col space-y-3'>
         <Chip className='h-auto w-10 fill-orange-300 md:w-12' />
-        <div className='flex items-center gap-3 font-mono text-xl text-foreground/80 drop-shadow-lg'>
+        <div className='flex items-center gap-3 font-mono text-xl font-semibold text-foreground/80 drop-shadow-lg'>
           <span>4242</span>
           <span>4242</span>
           <span>4242</span>
