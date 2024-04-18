@@ -1,4 +1,4 @@
-'use '
+'use client'
 import { CreditCard } from './credit-card'
 import HeroBg from '@/public/hero-bg.webp'
 import Image from 'next/image'
@@ -6,7 +6,7 @@ import { Button } from './ui/button'
 
 export const Hero = () => {
   return (
-    <section className='gradient-bottom relative flex flex-col items-center justify-center gap-6 py-8 md:py-48'>
+    <section className='gradient-bottom relative flex min-h-screen flex-col items-center justify-center gap-6 py-8 md:py-48'>
       <Image
         src={HeroBg}
         alt='Hero background'
