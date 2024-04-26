@@ -79,15 +79,15 @@
     @apply grid size-full grid-cols-[1fr] grid-rows-[auto_1fr_auto] bg-background text-foreground;
   }
   .gradient-left {
-    @apply relative before:absolute before:inset-0 before:-z-10 before:h-full before:w-1/2 before:bg-gradient-to-r before:from-primary/15 before:to-transparent;
+    @apply relative before:absolute before:inset-0 before:-z-10 before:h-full before:w-1/2 before:bg-gradient-to-r before:from-primary/20 before:to-transparent;
   }
   .gradient-right {
-    @apply relative before:absolute before:right-0 before:top-0 before:-z-10 before:h-full before:w-1/2 before:bg-gradient-to-l before:from-primary/15 before:to-transparent;
+    @apply before:from-primary/02 relative before:absolute before:right-0 before:top-0 before:-z-10 before:h-full before:w-1/2 before:bg-gradient-to-l before:to-transparent;
   }
   .gradient-bottom {
-    @apply relative before:absolute before:bottom-0 before:left-0 before:-z-10 before:h-1/2 before:w-full before:bg-gradient-to-t before:from-primary/15 before:to-transparent;
+    @apply relative before:absolute before:bottom-0 before:left-0 before:-z-10 before:h-1/2 before:w-full before:bg-gradient-to-t before:from-primary/20 before:to-transparent;
   }
   .gradient-diagonal {
-    @apply relative before:absolute before:inset-0 before:-z-10 before:h-full before:w-full before:bg-gradient-to-tr before:from-primary/15 before:to-transparent;
+    @apply relative before:absolute before:inset-0 before:-z-10 before:h-full before:w-full before:bg-gradient-to-tr before:from-primary/20 before:to-transparent;
   }
 }
